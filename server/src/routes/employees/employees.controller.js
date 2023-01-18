@@ -19,7 +19,6 @@ async function httpDeleteEmployee(req, res){
 
     await deleteEmployeeById(employeeId);
 
-    res
 }
 module.exports = {
     httpGetAllEmployees,
