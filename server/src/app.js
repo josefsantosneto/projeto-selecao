@@ -14,14 +14,12 @@ const employeesRouter = require('./routes/employees/employees.router')
 
 app.use(cors({
     origin: 'http://localhost:3000',
-    methods:['GET', 'POST'],
+    methods:['GET', 'POST', 'DELETE'],
     allowedHeaders:['Content-type', 'Access-Control-Allow-Origin'],
     
 }));
 
 app.use('/employees', employeesRouter);
-
-
 
 app.use(morgan('combined'));
 

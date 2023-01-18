@@ -3,7 +3,6 @@ const EmployeesDB = require('./employees.mongo');
 // const registeredEmployees =new Map();
 // const { employees } = require('./employees.model');
 
-let ultimoNumero = 0;
 
 // const emp = {
 //     "nome" : "Rafannela",
@@ -23,7 +22,7 @@ let ultimoNumero = 0;
 
 async function getAllEmployees(){
     return await EmployeesDB.find({},{
-        '_id':0, '__v':0,
+        '_id':1, '__v':0,
     });
 
 }
@@ -46,10 +45,20 @@ function loadEmployees() {
 
 }
 
+async function deleteEmployeeById(employeeId){
+    EmployeesDB.deleteMany({_id:employeeId},(err, foundEmployee)=>{
+        if(err){
+            console.log(err)
+        }else{
+            return foundEmployee;
+        }
+    });
+}
 
 
 module.exports = {
     getAllEmployees,
     saveEmployee,
     loadEmployees,
+    deleteEmployeeById,
 }

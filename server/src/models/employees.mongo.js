@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
-const cargoSchema = mongoose.Schema({
-    cargo:{type:String, required: true}
-});
+
 
 const employeesSchema = mongoose.Schema({
     nome: {type:String, required: true,}, 
