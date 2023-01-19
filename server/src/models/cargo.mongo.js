@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const cargoSchema = mongoose.Schema({
-    codigoCargo:{type:String, required: true},
+    codigoCargo:{type:Number, required: true},
     cargo:{type:String, required: true}
 });
 
