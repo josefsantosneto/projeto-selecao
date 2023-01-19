@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
 const employeesRouter = require('./routes/employees/employees.router')
-
+const cargosRouter = require('./routes/cargos/cargos.router');
 
 app.use(cors({
     origin: 'http://localhost:3000',
@@ -20,6 +20,7 @@ app.use(cors({
 }));
 
 app.use('/employees', employeesRouter);
+app.use('/cargos', cargosRouter);
 
 app.use(morgan('combined'));
 
