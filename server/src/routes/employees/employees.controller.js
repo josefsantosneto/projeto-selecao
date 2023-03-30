@@ -11,7 +11,7 @@ async function httpAddNewEmployee(req, res){
     employee.dataCadastro = new Date(employee.dataCadastro);
     await saveEmployee(employee);
     return res.status(201).json(employee);
-
+ 
 }
 
 async function httpDeleteEmployee(req, res){

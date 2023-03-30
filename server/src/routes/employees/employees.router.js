@@ -8,7 +8,7 @@ employeesRouter.get('/', httpGetAllEmployees);
 
 employeesRouter.post('/', httpAddNewEmployee);
 
-employeesRouter.delete('/:id', httpDeleteEmployee);
+employeesRouter.delete('/:id', httpDeleteEmployee); 
 
 
 module.exports = employeesRouter;
